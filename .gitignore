@@ -4,4 +4,5 @@ build
 .idea
 *.iml
 .DS_Store
-.m2/
+.m2/repository/
+!.m2/settings.xml
