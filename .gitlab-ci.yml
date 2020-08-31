@@ -20,3 +20,7 @@ test:
     - build
   script:
     - mvn $MAVEN_CLI_OPTS verify
+  artifacts:
+    paths:
+      - target/site/serenity
+    expire_in: 30 days

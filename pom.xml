@@ -21,6 +21,7 @@
     <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
     <maven.failsafe.plugin.version>3.0.0-M5</maven.failsafe.plugin.version>
     <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
+    <assertj.version>3.6.2</assertj.version>
     <parallel.tests>1</parallel.tests>
   </properties>
 
@@ -102,7 +103,7 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.6.2</version>
+      <version>${assertj.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -150,8 +151,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.plugin}</version>
         <configuration>
-          <source>11</source>
-          <target>11</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
