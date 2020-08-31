@@ -4,11 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
-import net.thucydides.core.annotations.Steps;
 import org.apache.http.HttpStatus;
 import petstore.PetStoreEndpoints;
-import petstore.factory.PetBuilder;
-import petstore.libs.PetResponse;
+import petstore.builders.PetBuilder;
 import petstore.models.Pet;
 
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
@@ -16,9 +14,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static petstore.utilities.Constants.CONTENT_TYPE;
 
 public class PetStepDefinitions extends BaseSteps {
-
-  @Steps
-  PetResponse petResponse;
 
   Pet pet;
 
