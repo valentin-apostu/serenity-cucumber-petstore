@@ -16,5 +16,7 @@ build:
 
 test:
   stage: test
+  dependencies:
+    - build
   script:
     - mvn $MAVEN_CLI_OPTS verify
