@@ -23,6 +23,7 @@
     <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
     <assertj.version>3.6.2</assertj.version>
     <parallel.tests>1</parallel.tests>
+    <java.version>11</java.version>
   </properties>
 
   <repositories>
@@ -70,24 +71,6 @@
       <version>${serenity.version}</version>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>net.serenity-bdd</groupId>-->
-<!--      <artifactId>serenity-screenplay</artifactId>-->
-<!--      <version>${serenity.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>net.serenity-bdd</groupId>-->
-<!--      <artifactId>serenity-screenplay-webdriver</artifactId>-->
-<!--      <version>${serenity.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>net.serenity-bdd</groupId>-->
-<!--      <artifactId>serenity-ensure</artifactId>-->
-<!--      <version>${serenity.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>net.serenity-bdd</groupId>
       <artifactId>serenity-cucumber5</artifactId>
@@ -151,8 +134,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.plugin}</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
       <plugin>
