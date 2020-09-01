@@ -45,13 +45,18 @@ The report will contain information about:
 > * Test Result for each Scenario
 > * the logged request and response, with all details
 
-## Run in CI
+### Run in CI
 The CI pipeline was created in GitLab. On each commit the pipeline is run. The pipeline has 2 phases
 > * Build - that build the code
 > * Test - that runs the tests and saves the Test Report as an artifact 
 
 The overview of all the runs is available here https://gitlab.com/valentin-apostu/serenity-cucumber-petstore/-/pipelines
 For each run the Test Report is saved and stored for 30 days. The report can be downloaded locally or browsed directly in GitLab.
+
+
+## Issues Found
+* application returns StatusCode 200 even when it should not. Because of this most of the positive and negative test will fail the StatusCode check.
+
 
 ## Framework structure
 > * Configurations folder
