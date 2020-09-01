@@ -29,10 +29,20 @@ test:
 #    expire_in: 30 days
 
 pages:
+  stage: deploy
   script:
+    - pwd
+    - ls
+    - cd /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity
+    - ls
+    - cd public
+    - ls
     - cp -R /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/* public
+    - cd public
+    - ls
   artifacts:
       when: always
       paths:
+#        - builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
         - public
       expire_in: 30 days
