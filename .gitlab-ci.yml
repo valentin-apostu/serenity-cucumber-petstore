@@ -20,8 +20,10 @@ test:
     - build
   script:
     - mvn $MAVEN_CLI_OPTS verify
+    - cp -R builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/ public
   artifacts:
     when: always
     paths:
-      - /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
+      - builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
+      - public
     expire_in: 30 days
