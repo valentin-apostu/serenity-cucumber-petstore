@@ -14,12 +14,12 @@ The
 ### Run Locally
 The project is hosted on GitHub. It can be either downloaded as a zip file or cloned.
 
-####To download locally as zip file follow these steps
+#### To download locally as zip file follow these steps
 > * open in a browser the link https://github.com/valentin-apostu/serenity-cucumber-petstore</br>
 > * select master branch
 > * click the __Code__ dropdown and select __Download__ zip
 >
-####To download locally by cloning the repository
+#### To download locally by cloning the repository
 > * open Terminal (on MacOS or Linux) or CommnandLine (on Windows) and run 
 > ```git --version```
  to check if git is already installed on the machine. If the version of git is not displayed then do the next step.
@@ -30,7 +30,7 @@ The project is hosted on GitHub. It can be either downloaded as a zip file or cl
 The framework can be run against multiple environments. The environments are defined in:
 > * ```/src/test/resources/configurations/configurations.json``` file
 
-####To run the tests locally run
+#### To run the tests locally run
 > * ```cd serenity-cucumber-petstore```
 > * ```mvn clean verify``` - will default to QA environment
 > * (OPTIONAL) ```mvn -Denv=dev clean verify``` - will test against the DEV environment
