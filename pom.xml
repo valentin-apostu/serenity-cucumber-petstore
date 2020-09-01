@@ -24,6 +24,7 @@
     <assertj.version>3.6.2</assertj.version>
     <parallel.tests>1</parallel.tests>
     <java.version>11</java.version>
+    <jackson.version>2.11.2</jackson.version>
   </properties>
 
   <repositories>
@@ -48,6 +49,18 @@
   </pluginRepositories>
 
   <dependencies>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>

@@ -1,6 +1,7 @@
 package petstore.stepdefinitions;
 
-public class BaseSteps {
-    public String baseUrl = "https://petstore.swagger.io/v2";
+import petstore.utilities.ConfigReader;
 
+public class BaseSteps {
+    public static final String BASE_URL = ConfigReader.BASE_URL;
 }

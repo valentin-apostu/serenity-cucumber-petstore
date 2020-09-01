@@ -10,12 +10,12 @@ import petstore.utilities.Constants;
 
 public class PetBuilder {
 
-  Long id;
+  Long id = Constants.DEFAULT_PET_ID;
   Category category = new CategoryBuilder().build();
   String name = Constants.DEFAULT_PET_NAME;
   List<String> photoUrls = Constants.DEFAULT_PHOTO_URLS;
   List<Tag> tags = Constants.DEFAULT_TAGS;
-  StatusEnum status = StatusEnum.AVAILABLE;
+  String status = StatusEnum.AVAILABLE.toString();
 
   public PetBuilder withId(Long id) {
     this.id = id;
@@ -31,13 +31,17 @@ public class PetBuilder {
     this.name = name;
     return this;
   }
+  public PetBuilder withoutName() {
+    this.name = null;
+    return this;
+  }
 
   public PetBuilder withPhotoUrls(List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
   public PetBuilder withoutPhotoUrls() {
-    this.photoUrls = Collections.emptyList();
+    this.photoUrls = null;
     return this;
   }
 
@@ -50,7 +54,7 @@ public class PetBuilder {
     return this;
   }
 
-  public PetBuilder withStatus(StatusEnum status) {
+  public PetBuilder withStatus(String status) {
     this.status = status;
     return this;
   }

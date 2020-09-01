@@ -1,20 +1,25 @@
 package petstore.models;
 
 import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
-@AllArgsConstructor
 public class Pet {
   private Long id;
   private Category category;
   private String name;
   private final List<String> photoUrls;
   private final List<Tag> tags;
-  private StatusEnum status;
+  private String status;
+
+  public Pet(Long id, Category category, String name, List<String> photoUrls, List<Tag> tags, String status) {
+    this.id = id;
+    this.category = category;
+    this.name = name;
+    this.photoUrls = photoUrls;
+    this.tags = tags;
+    this.status = status;
+  }
 
   public enum StatusEnum {
     AVAILABLE("available"),
