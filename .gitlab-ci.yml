@@ -23,23 +23,5 @@ test:
   artifacts:
     when: always
     paths:
-      - builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
+      - /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
     expire_in: 30 days
-
-pages:
-  stage: test
-  script:
-    - pwd
-    - ls -al
-    - cd /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity
-    - ls -al
-    - cd public
-    - ls -al
-    - cp -R /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/* public
-    - cd public
-    - ls -al
-  artifacts:
-      when: always
-      paths:
-        - public
-      expire_in: 30 days
