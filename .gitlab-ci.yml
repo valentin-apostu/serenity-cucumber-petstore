@@ -30,7 +30,7 @@ test:
 
 pages:
   script:
-    - cp -R /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/* /public
+    - cp -R /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/* public
   artifacts:
       when: always
       paths:
