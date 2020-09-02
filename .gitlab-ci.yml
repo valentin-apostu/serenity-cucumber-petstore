@@ -25,3 +25,16 @@ test:
     paths:
       - /builds/valentin-apostu/serenity-cucumber-petstore/target/site/serenity/
     expire_in: 30 days
+
+pages:
+  stage: test
+  script:
+    - pwd
+    - "echo test > public/test.txt"
+    - cd /
+    - ls -R
+  artifacts:
+    when: always
+    paths:
+      - public
+    expire_in: 30 days
