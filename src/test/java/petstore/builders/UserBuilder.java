@@ -4,13 +4,13 @@ import petstore.models.User;
 import petstore.utilities.Constants;
 
 public class UserBuilder {
-  Long id = Constants.DEFAULT_USER_ID;
-  String username = Constants.DEFAULT_USERNAME;
-  String firstName = Constants.DEFAULT_FIRSTNAME;
-  String email = Constants.DEFAULT_EMAIL;
-  String password = Constants.DEFAULT_PASSWORD;
-  String phone = Constants.DEFAULT_PHONE;
-  Integer userStatus = Constants.DEFAULT_USER_STATUS;
+  private Long id = Constants.DEFAULT_USER_ID;
+  private String username = Constants.DEFAULT_USERNAME;
+  private String firstName = Constants.DEFAULT_FIRSTNAME;
+  private String email = Constants.DEFAULT_EMAIL;
+  private String password = Constants.DEFAULT_PASSWORD;
+  private String phone = Constants.DEFAULT_PHONE;
+  private Integer userStatus = Constants.DEFAULT_USER_STATUS;
 
   public UserBuilder withId(Long id){
     this.id = id;

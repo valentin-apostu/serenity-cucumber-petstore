@@ -10,12 +10,12 @@ import petstore.utilities.Constants;
 
 public class PetBuilder {
 
-  Long id = Constants.DEFAULT_PET_ID;
-  Category category = new CategoryBuilder().build();
-  String name = Constants.DEFAULT_PET_NAME;
-  List<String> photoUrls = Constants.DEFAULT_PHOTO_URLS;
-  List<Tag> tags = Constants.DEFAULT_TAGS;
-  String status = StatusEnum.AVAILABLE.toString();
+  private Long id = Constants.DEFAULT_PET_ID;
+  private Category category = new CategoryBuilder().build();
+  private String name = Constants.DEFAULT_PET_NAME;
+  private List<String> photoUrls = Constants.DEFAULT_PHOTO_URLS;
+  private List<Tag> tags = Constants.DEFAULT_TAGS;
+  private String status = StatusEnum.AVAILABLE.toString();
 
   public PetBuilder withId(Long id) {
     this.id = id;

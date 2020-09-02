@@ -4,8 +4,8 @@ import petstore.models.Category;
 import petstore.utilities.Constants;
 
 public class CategoryBuilder {
-  Long id = Constants.DEFAULT_CATEGORY_ID;
-  String name = Constants.DEFAULT_CATEGORY_NAME;
+  private Long id = Constants.DEFAULT_CATEGORY_ID;
+  private String name = Constants.DEFAULT_CATEGORY_NAME;
 
   public CategoryBuilder withId(Long id){
     this.id = id;
