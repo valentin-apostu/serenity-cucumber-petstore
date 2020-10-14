@@ -1,25 +1,38 @@
 package petstore.models;
 
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import petstore.utilities.Constants;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pet {
-  private Long id;
-  private Category category;
-  private String name;
-  private final List<String> photoUrls;
-  private final List<Tag> tags;
-  private String status;
+  @Builder.Default private Long id = Constants.DEFAULT_PET_ID;
+  @Builder.Default private Category category = Category.builder().build();
+  @Builder.Default private String name = Constants.DEFAULT_PET_NAME;
+  @Builder.Default private List<String> photoUrls = Constants.DEFAULT_EMPTY_LIST;
+  @Builder.Default private List<Tag> tags = Constants.DEFAULT_EMPTY_TAG_LIST;
+  @Builder.Default private String status = StatusEnum.AVAILABLE.toString();
 
-  public Pet(Long id, Category category, String name, List<String> photoUrls, List<Tag> tags, String status) {
-    this.id = id;
-    this.category = category;
-    this.name = name;
-    this.photoUrls = photoUrls;
-    this.tags = tags;
-    this.status = status;
+  public static class PetBuilder {
+    private String name = Constants.DEFAULT_PET_NAME;
+    private List<String> photoUrls = Constants.DEFAULT_EMPTY_LIST;
+
+    public PetBuilder withoutName() {
+      this.name = null;
+      return this;
+    }
+    public PetBuilder withoutPhotoUrls() {
+      this.photoUrls = null;
+      return this;
+    }
   }
+
 
   public enum StatusEnum {
     AVAILABLE("available"),

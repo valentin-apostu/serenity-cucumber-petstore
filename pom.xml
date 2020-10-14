@@ -19,7 +19,7 @@
     <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
     <maven.failsafe.plugin.version>3.0.0-M5</maven.failsafe.plugin.version>
     <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
-    <logback.version>1.0.13</logback.version>
+    <logback.version>1.2.3</logback.version>
     <assertj.version>3.6.2</assertj.version>
     <jackson.version>2.11.2</jackson.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,11 +60,6 @@
       <artifactId>jackson-databind</artifactId>
       <version>${jackson.version}</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>${logback.version}</version>
     </dependency>
     <dependency>
       <groupId>net.serenity-bdd</groupId>
@@ -108,7 +103,20 @@
       <version>${hamcrest.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>json-schema-validator</artifactId>
+      <version>4.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -132,6 +140,7 @@
           <parallel>classes</parallel>
           <threadCount>${parallel.tests}</threadCount>
           <forkCount>${parallel.tests}</forkCount>
+          <reuseForks>true</reuseForks>
         </configuration>
         <executions>
           <execution>
