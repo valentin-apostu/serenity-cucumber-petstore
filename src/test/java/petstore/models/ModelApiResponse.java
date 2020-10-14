@@ -1,17 +1,18 @@
 package petstore.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import petstore.utilities.Constants;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ModelApiResponse {
-  private Integer code;
-  private String type;
-  private String message;
-
-  public ModelApiResponse(Integer code, String type, String message) {
-    this.code = code;
-    this.type = type;
-    this.message = message;
-  }
+  @Builder.Default private Integer code = Constants.DEFAULT_RESPONSE_CODE;
+  @Builder.Default private String type = Constants.DEFAULT_RESPONSE_TYPE;
+  @Builder.Default private String message = Constants.DEFAULT_RESPONSE_MESSAGE;
 }
 

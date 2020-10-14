@@ -1,9 +1,9 @@
 Feature: Add pet to store
 
   Scenario: Valid pet can be added to store
-  Given a new pet
-  When I add the pet to store
-  Then the pet is added correctly
+    Given a new pet
+    When I add the pet to store
+    Then the pet is added correctly
 
   Scenario: Adding a pet with a wrong HTTP method is not allowed
     Given a new pet
