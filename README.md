@@ -1,4 +1,4 @@
-# Demo project for testing Pet Store using Serenity and Cucumber
+# Demo project for testing Pet Store using Serenity and Cucumber - OUTDATED
 
 [![CI](https://gitlab.com/valentin-apostu/serenity-cucumber-petstore/badges/master/pipeline.svg)](https://gitlab.com/valentin-apostu/serenity-cucumber-petstore/-/commits/master)
 
